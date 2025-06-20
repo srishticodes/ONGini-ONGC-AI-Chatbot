@@ -10,6 +10,14 @@ body {
   color: #333;
   overflow-x: hidden;
 }
+df-messenger {
+   --df-messenger-bot-message: #878fac;
+   --df-messenger-button-titlebar-color: #df9b56;
+   --df-messenger-chat-background-color: #fafafa;
+   --df-messenger-font-color: white;
+   --df-messenger-send-icon: #878fac;
+   --df-messenger-user-message: #479b3d;
+  }
 
 /* Header Styles */
 .header {
