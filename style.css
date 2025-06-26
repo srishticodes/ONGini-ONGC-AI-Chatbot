@@ -522,3 +522,27 @@ df-messenger {
   z-index: 1001;
   transition: width 0.1s ease;
 }
+
+#draggable-chatbot {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  min-width: 350px;
+  max-width: 90vw;
+  width: 400px;
+  min-height: 500px;
+  max-height: 90vh;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+#draggable-chatbot df-messenger {
+  height: 100%;
+  width: 100%;
+  min-height: 500px;
+  min-width: 350px;
+}
