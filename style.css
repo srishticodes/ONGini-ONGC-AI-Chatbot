@@ -25,8 +25,14 @@ body {
 
 .header.scrolled {
   padding: 0.5rem 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: #fff;
+}
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  .header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
 }
 
 .nav-container {
@@ -41,7 +47,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  color: white;
+  color: #1e3c72; /* Changed from white to dark blue */
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -107,6 +113,7 @@ body {
 .hero {
   height: 100vh;
   background-image: url(https://isfm.co.in/wp-content/uploads/2024/11/upcoming-ongc-ipo.webp);
+  -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
   /* background: linear-gradient(
       135deg,
@@ -171,13 +178,13 @@ body {
 
 .btn-primary {
   background: linear-gradient(45deg, #ff6b35, #f7931e);
-  color: white;
+  color: lightgrey;
 }
 
 .btn-secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
+  background: linear-gradient(45deg, #1e3c72, #4b6698);
+  color: lightgrey; /* Changed from white to dark blue */
+  border: 2px solid #1e3c72; /* Changed from white to dark blue */
 }
 
 .btn:hover {
@@ -187,11 +194,12 @@ body {
 
 .btn-primary:hover {
   background: linear-gradient(45deg, #f7931e, #ff6b35);
+  color: #fff;
 }
 
 .btn-secondary:hover {
-  background: white;
-  color: #1e3c72;
+  background: linear-gradient(45deg, #1e3c72, #4b6698);
+  color: #fff;
 }
 
 /* Stats Section */
@@ -498,6 +506,12 @@ body {
 
   .section-title {
     font-size: 2rem;
+  }
+  .nav-menu {
+    background: #fff; /* Changed from #1e3c72 to white */
+  }
+  .nav-link {
+    color: #1e3c72; /* Ensure links are visible on white */
   }
 }
 
